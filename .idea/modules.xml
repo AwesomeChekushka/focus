@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../awesome-vc/.idea/awesome-vc.iml" filepath="$PROJECT_DIR$/../awesome-vc/.idea/awesome-vc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../focus-js/.idea/focus-js.iml" filepath="$PROJECT_DIR$/../focus-js/.idea/focus-js.iml" />
     </modules>
   </component>
 </project>

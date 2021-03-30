@@ -1,1 +1,2 @@
-# Awesome Video Codec
+# Focus
+TODO: add README
