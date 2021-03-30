@@ -83,7 +83,7 @@ out/
 .idea_modules/
 
 # JIRA plugin
-atlassian-ide-plugin.xml
+atlassian-ide-plug in.xml
 
 # Cursive Clojure plugin
 .idea/replstate.xml
@@ -100,3 +100,8 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
+### NPM
+node_modules
+
+### Build results
+/lib
