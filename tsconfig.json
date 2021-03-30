@@ -1,16 +1,8 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./lib",
     "declaration": true,
-  },
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Recommended",
-  "include": ["src", "tests"],
-  "exclude": ["node_modules"]
+    "outDir": "./lib",
+    "removeComments": true,
+  }
 }

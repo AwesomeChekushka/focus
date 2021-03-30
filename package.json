@@ -1,16 +1,17 @@
 {
   "name": "@chekushka/focus-js",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "TODO: add README",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "dev-build": "tsc --project tsconfig.dev.json",
+    "prod-build": "tsc --project tsconfig.prod.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "format:check": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" --check",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "lint:check": "eslint '*/**/*.{js,ts,tsx}'",
-    "prepare": "npm run build",
+    "prepare": "npm run prod-build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A .",
@@ -30,6 +31,7 @@
   },
   "homepage": "https://gitlab.com/awesome-ddp/focus-js#readme",
   "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^26.0.22",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
@@ -42,6 +44,7 @@
     "typescript": "^4.2.3"
   },
   "files": [
-    "lib/**/*"
+    "lib",
+    "README.md"
   ]
 }
