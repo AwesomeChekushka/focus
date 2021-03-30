@@ -1,6 +1,6 @@
 {
   "name": "@chekushka/focus-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "TODO: add README",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
