@@ -1,6 +1,6 @@
-import { MediaStream } from "./mocks/media-stream";
-import { MediaSource } from "./mocks/media-source";
-import { decode } from "../src";
+import { MediaStream } from "../mocks/media-stream";
+import { MediaSource } from "../mocks/media-source";
+import { decode } from "../../src";
 
 test.each([Blob, MediaStream, MediaSource])(
   "decode smoke test",

@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc --project config/ts/tsconfig.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --config config/eslint/.eslintrc.js --ignore-path config/eslint/.eslintignore --fix",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --config config/eslint/.eslintrc.js --ignore-path config/eslint/.eslintignore",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
