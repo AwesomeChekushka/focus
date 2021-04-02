@@ -1,31 +1,28 @@
 {
-  "name": "@chekushka/focus-js",
-  "version": "0.1.2",
+  "name": "@chekushka/focus",
+  "version": "0.1.0",
   "description": "TODO: add README",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc --project config/ts/tsconfig.json",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --config config/eslint/.eslintrc.js --ignore-path config/eslint/.eslintignore",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A .",
-    "postversion": "git push && git push --tags",
+    "format": "prettier --write '*/**/*.{js,ts,tsx,jsx}'",
+    "format:check": "npm run format --check",
+    "lint:fix": "npm run lint --fix",
+    "lint": "eslint '*/**/*.{js,ts,tsx,jsx}' --config config/eslint/.eslintrc.js --ignore-path config/eslint/.eslintignore",
     "test": "jest --config config/jest/jestconfig.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:AwesomeChekushka/focus.git"
+    "url": "git+ssh://git@gitlab.com:awesome-ddp/focus.git"
   },
   "keywords": [],
   "author": "Chekushka",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AwesomeChekushka/focus/issues"
+    "url": "https://gitlab.com/awesome-ddp/focus/-/issues"
   },
-  "homepage": "https://github.com/AwesomeChekushka/focus",
+  "homepage": "https://gitlab.com/awesome-ddp/focus",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^26.0.22",
