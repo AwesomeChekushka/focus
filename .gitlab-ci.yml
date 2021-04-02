@@ -49,5 +49,5 @@ npm:
   only:
     - tags
   script:
-    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+    - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
     - npm publish --access public
