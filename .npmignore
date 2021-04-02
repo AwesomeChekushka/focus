@@ -1,2 +1,6 @@
 ### exclude tests
-test
+lib/test/
+coverage/
+
+node_modules/
+.idea/

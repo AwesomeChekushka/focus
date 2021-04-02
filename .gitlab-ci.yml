@@ -5,6 +5,7 @@ variables:
 stages:
   - install
   - test
+  - build
   - publish
 
 cache: &global_cache
@@ -43,11 +44,22 @@ unit-tests:
   script:
     - npm run test
 
+build:
+  stage: build
+  image: ${NODE_IMAGE}
+  artifacts:
+    paths:
+      - lib
+    expire_in: 1 week
+  script:
+    - npm run build
+
 npm:
   stage: publish
   image: ${NODE_IMAGE}
   only:
     - tags
   script:
+    - echo ${NPM_TOKEN}
     - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-    - npm publish --access public --verbose
+    - npm publish --access public
