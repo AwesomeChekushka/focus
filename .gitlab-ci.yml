@@ -1,0 +1,52 @@
+variables:
+  NODE_VERSION: '15.11-alpine'
+  NODE_IMAGE: 'node:${NODE_VERSION}'
+
+stages:
+  - install
+  - test
+  - publish
+
+cache: &global_cache
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - node_modules
+  policy: pull
+
+deps:
+  stage: install
+  image: ${NODE_IMAGE}
+  cache:
+    <<: *global_cache
+    policy: pull-push
+  script:
+    - npm audit
+    - npm ci
+
+prettier:
+  stage: test
+  image: ${NODE_IMAGE}
+  script:
+    - npm run format:check
+
+eslint:
+  stage: test
+  image: ${NODE_IMAGE}
+  script:
+    - npm run lint
+
+unit-tests:
+  stage: test
+  image: ${NODE_IMAGE}
+  script:
+    - npm run test
+
+npm:
+  stage: publish
+  image: ${NODE_IMAGE}
+  only:
+    - tags
+  script:
+    - npm publish

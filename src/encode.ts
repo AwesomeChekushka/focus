@@ -1,1 +1,3 @@
-export const encode = (rawStream: any): any => rawStream;
+export const encode = async (stream: MediaProvider): Promise<MediaProvider> => {
+  return stream;
+};
