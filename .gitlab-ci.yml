@@ -24,7 +24,7 @@ deps:
     policy: pull-push
   script:
     - npm audit
-    - npm ci
+    - npm i
 
 prettier:
   stage: test
@@ -60,4 +60,4 @@ npm:
   only:
     - tags
   script:
-    - npm publish --access public
+    - NPM_TOKEN=${NPM_TOKEN} npx semantic-release
