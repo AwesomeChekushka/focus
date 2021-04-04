@@ -1,5 +1,5 @@
 {
-  "rootDir": "../../test",
+  "rootDir": "../../",
   "testRegex": ".*\\.test\\.ts$",
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
@@ -8,5 +8,6 @@
     "**/*.(t|j)s"
   ],
   "coverageDirectory": "../../coverage",
+  "coveragePathIgnorePatterns": ["config", "test/mocks"],
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"]
 }

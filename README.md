@@ -1,2 +1,3 @@
 # Focus
-TODO: add README
+A video codec, designed to be used in video conference systems.
+# Table of contents

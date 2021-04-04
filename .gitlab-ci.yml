@@ -42,7 +42,7 @@ unit-tests:
   stage: test
   image: ${NODE_IMAGE}
   script:
-    - npm run test
+    - npm run test -- --coverage
 
 build:
   stage: build
