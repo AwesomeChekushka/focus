@@ -60,4 +60,4 @@ npm:
   only:
     - master
   script:
-    - NPM_TOKEN=${NPM_TOKEN} npx semantic-release
+    - npx semantic-release
