@@ -58,6 +58,6 @@ npm:
   stage: publish
   image: ${NODE_IMAGE}
   only:
-    - tags
+    - master
   script:
     - NPM_TOKEN=${NPM_TOKEN} npx semantic-release
