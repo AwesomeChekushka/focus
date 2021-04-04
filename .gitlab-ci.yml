@@ -60,4 +60,5 @@ npm:
   only:
     - master
   script:
+    - npm i  @semantic-release/gitlab
     - npx semantic-release
