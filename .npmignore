@@ -1,6 +1,0 @@
-### exclude tests
-lib/test/
-coverage/
-
-node_modules/
-.idea/
