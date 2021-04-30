@@ -1,5 +1,5 @@
 variables:
-  NODE_VERSION: '15.11-buster'
+  NODE_VERSION: '16'
   NODE_IMAGE: 'node:${NODE_VERSION}'
 
 stages:
@@ -26,11 +26,15 @@ deps:
     - npm audit
     - npm i
 
-prettier:
-  stage: test
+build:
+  stage: build
   image: ${NODE_IMAGE}
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 week
   script:
-    - npm run format:check
+    - npm run build
 
 eslint:
   stage: test
@@ -43,16 +47,6 @@ unit-tests:
   image: ${NODE_IMAGE}
   script:
     - npm run test -- --coverage
-
-build:
-  stage: build
-  image: ${NODE_IMAGE}
-  artifacts:
-    paths:
-      - lib
-    expire_in: 1 week
-  script:
-    - npm run build
 
 npm:
   stage: publish

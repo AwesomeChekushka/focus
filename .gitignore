@@ -104,7 +104,7 @@ fabric.properties
 node_modules
 
 ### Build results
-/lib
+dist
 
 ### Test results
 coverage

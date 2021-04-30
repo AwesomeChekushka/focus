@@ -1,17 +1,17 @@
 {
   "name": "@chekushka/focus",
-  "version": "0.3.1",
-  "description": "TODO: add README",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "version": "1.0.0",
+  "description": "A video codec, designed to be used in:\n1. Video conferencing systems (like Skype, Google Meet, Zoom, etc.)\n2. Streaming services (Twitch, YouTube)",
   "scripts": {
-    "build": "tsc --project config/ts/tsconfig.json",
-    "format": "prettier --write '*/**/*.{js,ts,tsx,jsx}'",
-    "format:check": "npm run format --check",
-    "lint:fix": "npm run lint --fix",
-    "lint": "eslint '*/**/*.{js,ts,tsx,jsx}' --config config/eslint/.eslintrc.js --ignore-path config/eslint/.eslintignore",
-    "test": "jest --config config/jest/jestconfig.json"
+    "build": "webpack",
+    "lint": "eslint '*/**/*.{js, json}'",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://gitlab.com/awesome-ddp/focus.git"
@@ -24,22 +24,32 @@
   },
   "homepage": "https://gitlab.com/awesome-ddp/focus",
   "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
     "@semantic-release/gitlab": "^6.0.9",
-    "@tsconfig/recommended": "^1.0.1",
-    "@types/jest": "^26.0.22",
-    "@typescript-eslint/eslint-plugin": "^4.20.0",
-    "@typescript-eslint/parser": "^4.20.0",
-    "eslint": "^7.23.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^4.3.1",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "semantic-release": "^17.4.2",
-    "ts-jest": "^26.5.4",
-    "typescript": "^4.2.3"
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0"
   },
-  "files": [
-    "lib/",
-    "README.md"
-  ]
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.3.0",
+    "folktale": "^2.3.2",
+    "ramda": "^0.27.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  }
 }
