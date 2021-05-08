@@ -1,23 +1,20 @@
 module.exports = {
-  ignorePatterns: ['node_modules', 'dist'],
   env: {
     browser: true,
-    commonjs: true,
     es2021: true,
-    jest: true
   },
   extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'standard',
-    'prettier'
+    'plugin:prettier/recommended',
+    'prettier',
   ],
-  plugins: [
-    'prettier'
-  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  rules: {
-    'prettier/prettier': ['error']
-  }
+  plugins: ['@typescript-eslint', 'prettier'],
+  rules: {},
 }

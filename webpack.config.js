@@ -1,31 +1,23 @@
 const path = require('path')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'index.js'),
-  mode: 'production',
+  entry: path.resolve(__dirname, 'src'),
+
   output: {
     filename: 'focus.js',
     path: path.resolve(__dirname, 'dist'),
-    library: {
-      name: 'Focus',
-      type: 'umd',
-    },
   },
+
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
   },
+
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
+      { test: /\.(ts|js)x?$/, loader: 'babel-loader', exclude: /node_modules/ },
     ],
   },
+
+  plugins: [new ForkTsCheckerWebpackPlugin()],
 }
