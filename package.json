@@ -1,6 +1,6 @@
 {
   "name": "@chekushka/focus",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A video codec, designed to be used in:\n1. Video conferencing systems (like Skype, Google Meet, Zoom, etc.)\n2. Streaming services (Twitch, YouTube)",
   "scripts": {
     "build": "rimraf dist && tsc -p ./tsconfig.build.json",
