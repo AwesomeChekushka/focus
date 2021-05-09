@@ -1,5 +1,4 @@
-export type Stream = MediaStream
-export interface CodecAwareStream extends Stream {
+export interface CodecAwareStream extends MediaStream {
   codecLabel: string
 }
 export type EncodedStream = CodecAwareStream
@@ -9,8 +8,8 @@ export interface EncodeParams {
 }
 
 export interface Encode {
-  (stream?: Stream, params?: EncodeParams): Promise<undefined | EncodedStream>
+  (stream?: MediaStream, params?: EncodeParams): Promise<undefined | EncodedStream>
 }
 export interface Decode {
-  (stream?: EncodedStream): Promise<undefined | Stream>
+  (stream?: EncodedStream): Promise<undefined | MediaStream>
 }

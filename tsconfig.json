@@ -1,6 +1,8 @@
 {
     "extends": "@tsconfig/recommended/tsconfig.json",
     "compilerOptions": {
+        "outDir": "dist",
+        "declarationDir": "dist/types",
         "allowSyntheticDefaultImports": true,
         "noFallthroughCasesInSwitch": true,
 //        "noUnusedParameters": true,
@@ -8,7 +10,6 @@
         "esModuleInterop": true,
         "noUnusedLocals": true,
         "noImplicitAny": true,
-        "declarationDir": "dist/types",
         "declaration": true
     }
 }
