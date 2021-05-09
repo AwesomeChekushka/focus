@@ -46,7 +46,7 @@ unit-tests:
   stage: test
   image: ${NODE_IMAGE}
   script:
-    - npm run test -- --coverage
+    - npm run test:unit:cov
 
 npm:
   stage: publish
