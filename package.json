@@ -1,6 +1,6 @@
 {
   "name": "@chekushka/focus",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A video codec, designed to be used in:\n1. Video conferencing systems (like Skype, Google Meet, Zoom, etc.)\n2. Streaming services (Twitch, YouTube)",
   "scripts": {
     "build": "rimraf dist && tsc -p ./tsconfig.build.json",
@@ -14,7 +14,9 @@
     "name": "Chizha D.",
     "email": "awesome.chekushka@gmail.com"
   },
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "repository": {
     "type": "git",
     "url": "https://gitlab.com/awesome-ddp/focus.git"
