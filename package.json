@@ -8,7 +8,7 @@
     "build:types": "tsc --emitDeclarationOnly -p ./tsconfig.build.json",
     "build:js": "webpack --mode=production",
     "build": "rimraf dist/ && npm run build:types && npm run build:js",
-    "lint": "eslint '*/**/*.{js, ts, tsx, jsx}'",
+    "lint": "eslint '{**/*,*}.{js,ts, jsx, tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:cov": "jest --coverage"
@@ -42,6 +42,8 @@
     "@babel/preset-typescript": "^7.13.0",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@semantic-release/gitlab": "^6.0.9",
     "@tsconfig/recommended": "^1.0.1",
     "@types/webpack-env": "^1.16.0",
