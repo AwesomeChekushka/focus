@@ -1,3 +1,10 @@
+# [3.1.0](https://gitlab.com/focusgroup/focus/compare/v3.0.1...v3.1.0) (2021-05-11)
+
+
+### Features
+
+* **interface:** define interface of the lib ([416d1ff](https://gitlab.com/focusgroup/focus/commit/416d1ff62833eb81c0b2180aad958726b2deba3b))
+
 ## [3.0.1](https://gitlab.com/awesome-ddp/focus/compare/v3.0.0...v3.0.1) (2021-05-09)
 
 
