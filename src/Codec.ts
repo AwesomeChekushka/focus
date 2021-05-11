@@ -1,6 +1,12 @@
-import { Decode, Encode } from './types'
+interface EncodedStream extends MediaStream {
+  codecLabel: string
+}
+
+interface EncodeParams {
+  connectionQuality: number
+}
 
 export interface Codec {
-  encode: Encode
-  decode: Decode
+  encode(stream: MediaStream, params?: EncodeParams): Promise<EncodedStream>
+  decode(stream: EncodedStream): Promise<MediaStream>
 }
