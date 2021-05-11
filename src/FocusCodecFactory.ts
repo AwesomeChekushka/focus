@@ -1,6 +1,7 @@
 import { CodecFactory } from './CodecFactory'
 import { Codec } from './Codec'
 import { defaultCodecLabel } from './constants'
+import { NotImplementedException } from './error'
 
 export class FocusCodecFactory implements CodecFactory {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -8,11 +9,11 @@ export class FocusCodecFactory implements CodecFactory {
     return {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       encode: async (stream, params) => {
-        return undefined
+        throw new NotImplementedException()
       },
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       decode: async (stream) => {
-        return undefined
+        throw new NotImplementedException()
       },
     }
   }
