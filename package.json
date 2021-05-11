@@ -1,5 +1,5 @@
 {
-  "name": "@chekushka/focus",
+  "name": "@focus-group/focus",
   "version": "3.0.1",
   "description": "A video codec, designed to be used in:\n1. Video conferencing systems (like Skype, Google Meet, Zoom, etc.)\n2. Streaming services (Twitch, YouTube)",
   "scripts": {
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/awesome-ddp/focus.git"
+    "url": "https://gitlab.com/focusgroup/focus.git"
   },
   "keywords": [
     "video",
@@ -29,9 +29,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/awesome-ddp/focus/-/issues"
+    "url": "https://gitlab.com/focusgroup/focus/-/issues"
   },
-  "homepage": "https://gitlab.com/awesome-ddp/focus",
+  "homepage": "https://gitlab.com/focusgroup/focus",
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
