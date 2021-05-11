@@ -1,5 +1,5 @@
 {
-  "name": "@focus-group/focus",
+  "name": "@chekushka/focus",
   "version": "3.1.0",
   "description": "A video codec, designed to be used in:\n1. Video conferencing systems (like Skype, Google Meet, Zoom, etc.)\n2. Streaming services (Twitch, YouTube)",
   "scripts": {
