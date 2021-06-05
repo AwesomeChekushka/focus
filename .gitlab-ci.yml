@@ -42,11 +42,11 @@ eslint:
   script:
     - npm run lint
 
-unit-tests:
-  stage: test
-  image: ${NODE_IMAGE}
-  script:
-    - npm run test:unit:cov
+#unit-tests:
+#  stage: test
+#  image: ${NODE_IMAGE}
+#  script:
+#    - npm run test:unit:cov
 
 npm:
   stage: publish
