@@ -14,15 +14,17 @@ const encode = async (
     throw new InvalidArgumentError('videoTrack.kind', videoTrack.kind)
 
   video.srcObject = new MediaStream([videoTrack])
-  await video.play()
+  video.autoplay = true
 
   const encodeFrame = createEncodeFrame(params, controlRate, exportRoi)
 
   video.addEventListener('playing', () => {
+    canvas.width = video.videoWidth
+    canvas.height = video.videoHeight
     update(encodeFrame, canvas, video)
   })
 
-  return canvas.captureStream(30).getVideoTracks()[0]
+  return canvas.captureStream().getVideoTracks()[0]
 }
 
 export default encode

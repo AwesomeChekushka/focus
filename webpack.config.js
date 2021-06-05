@@ -18,7 +18,9 @@ module.exports = {
   },
 
   module: {
-    rules: [{ test: /\.(ts|js)x?$/, loader: 'babel-loader', exclude: /node_modules/ }],
+    rules: [
+      { test: /\.(ts|js)x?$/, loader: 'babel-loader', exclude: /node_modules/ },
+    ],
   },
 
   plugins: [new ForkTsCheckerWebpackPlugin()],

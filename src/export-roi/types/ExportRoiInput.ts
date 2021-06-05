@@ -1,7 +1,3 @@
-type ExportRoiInput =
-  | ImageData
-  | HTMLImageElement
-  | HTMLCanvasElement
-  | HTMLVideoElement
+type ExportRoiInput = HTMLVideoElement
 
 export default ExportRoiInput

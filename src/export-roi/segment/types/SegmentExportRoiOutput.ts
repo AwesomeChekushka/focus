@@ -4,11 +4,11 @@ interface Legend {
 }
 
 interface SegmentExportRoiOutput {
+  type: 'segment'
   height: number
   width: number
   legend: Legend
   segmentationMap: Uint8ClampedArray
-  type: 'segment'
 }
 
 export default SegmentExportRoiOutput

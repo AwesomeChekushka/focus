@@ -11,20 +11,16 @@ const internalSetExportRoi = (exportRoi: ExportRoi): FocusConfig => {
   return config(configObj)
 }
 
-const setExportRoiByLabel = async (
-  label: ExportRoiLabel,
-): Promise<FocusConfig> => {
-  return internalSetExportRoi(await getExportRoi(label))
+const setExportRoiByLabel = (label: ExportRoiLabel): FocusConfig => {
+  return internalSetExportRoi(getExportRoi(label))
 }
 
-const setExportRoi = (
-  exportRoi: ExportRoiLabel | ExportRoi,
-): Promise<FocusConfig> => {
+const setExportRoi = (exportRoi: ExportRoiLabel | ExportRoi): FocusConfig => {
   if (typeof exportRoi === 'string') {
     return setExportRoiByLabel(exportRoi)
   }
 
-  return Promise.resolve(internalSetExportRoi(exportRoi))
+  return internalSetExportRoi(exportRoi)
 }
 
 export default setExportRoi

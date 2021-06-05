@@ -8,22 +8,19 @@ const controlRate = (
 ): Promise<ControlRateOutput> => {
   const { origin } = input
 
-  if (origin instanceof ImageData) {
-    return Promise.resolve(origin)
-  }
-
   const canvas = document.createElement('canvas')
   const context = canvas.getContext('2d')
 
   if (!context) throw new Error('Canvas context was undefined')
 
-  canvas.width = origin.width
-  canvas.height = origin.height
+  const width = origin.videoWidth
+  const height = origin.videoHeight
+
+  canvas.width = width
+  canvas.height = height
   context.drawImage(origin, 0, 0)
 
-  return Promise.resolve(
-    context.getImageData(0, 0, origin.width, origin.height),
-  )
+  return Promise.resolve(context.getImageData(0, 0, width, height))
 }
 
 export default controlRate

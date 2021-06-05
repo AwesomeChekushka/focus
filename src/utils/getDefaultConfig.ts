@@ -23,7 +23,7 @@ const getDefaultConfig = (): FocusConfig => {
 
   const video = document.createElement('video')
   const exportRoi = getExportRoi(SegmentExportRoiLabel.Deeplab)
-  const controlRate = getControlRate(ControlRateLabel.NearestNeighbour)
+  const controlRate = getControlRate(ControlRateLabel.Dummy)
 
   return {
     canvas,

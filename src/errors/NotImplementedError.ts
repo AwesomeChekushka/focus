@@ -1,8 +1,8 @@
 class NotImplementedError extends Error {
   name = 'NotImplemented'
 
-  constructor(moduleName: string) {
-    super(`The module ${moduleName} not implemented.`)
+  constructor(moduleName?: string) {
+    super(`The module ${moduleName} is not implemented.`)
   }
 }
 

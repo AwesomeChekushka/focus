@@ -69,7 +69,7 @@ declare const encode: (params: EncodeParams, videoTrack: MediaStreamTrack) => Pr
 const userMedia = await navigator.mediaDevices.getUserMedia(constraints)
 
 const encodedVideoTrack = await Focus.encode({ getBandwidth }, userMedia.getVideoTracks()[0])
-const encodedUserMedia = new MediaStream([encodedVideoTrack, userMedia.getAudioTracks()])
+const encodedUserMedia = new MediaStream([encodedVideoTrack, ...userMedia.getAudioTracks()])
 ```
 ##### Focus.reset()
 ```ts
@@ -102,7 +102,7 @@ declare const setExportRoi: (exportRoi: ExportRoiLabel | ExportRoi) => Promise<F
 Focus.setExportRoi(BboxExportRoiLabel.Coco)
 
 // set custom function
-Focus.setExportRoi((input: ExportRoiInput): Promise<ExportRoiOutput>;)
+Focus.setExportRoi((input: ExportRoiInput): Promise<ExportRoiOutput>)
 ```
 
 ## License
