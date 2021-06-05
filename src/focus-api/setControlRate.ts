@@ -11,20 +11,18 @@ const internalSetControlRate = (controlRate: ControlRate): FocusConfig => {
   return config(configObj)
 }
 
-const setControlRateByLabel = async (
-  label: ControlRateLabel,
-): Promise<FocusConfig> => {
-  return internalSetControlRate(await getControlRate(label))
+const setControlRateByLabel = (label: ControlRateLabel): FocusConfig => {
+  return internalSetControlRate(getControlRate(label))
 }
 
 const setControlRate = (
   controlRate: ControlRateLabel | ControlRate,
-): Promise<FocusConfig> => {
+): FocusConfig => {
   if (typeof controlRate === 'string') {
     return setControlRateByLabel(controlRate)
   }
 
-  return Promise.resolve(internalSetControlRate(controlRate))
+  return internalSetControlRate(controlRate)
 }
 
 export default setControlRate
