@@ -1,3 +1,16 @@
+# [4.0.0](https://gitlab.com/focusgroup/focus/compare/v3.1.0...v4.0.0) (2021-06-05)
+
+
+### Features
+
+* **control-rate:** add dummy control-rate ([bb68261](https://gitlab.com/focusgroup/focus/commit/bb68261dcc701d076bb4440af11197a38324b4bb))
+* **videocodec:** designed project structure, defined focus-api, implement dummy algs and deeplab ([b644168](https://gitlab.com/focusgroup/focus/commit/b6441685c6faafc045c5763ac132114cec96e628))
+
+
+### BREAKING CHANGES
+
+* **videocodec:** Change the library API
+
 # [3.1.0](https://gitlab.com/focusgroup/focus/compare/v3.0.1...v3.1.0) (2021-05-11)
 
 
