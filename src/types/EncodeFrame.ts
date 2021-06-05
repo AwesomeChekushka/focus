@@ -1,5 +1,5 @@
 import ExportRoiInput from '../export-roi/types/ExportRoiInput'
-import ControlRateOutput from '../control-rate/ControlRateOutput'
+import ControlRateOutput from '../control-rate/types/ControlRateOutput'
 
 /** @internal */
 type EncodeFrameInput = ExportRoiInput

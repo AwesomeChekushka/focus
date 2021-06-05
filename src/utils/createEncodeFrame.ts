@@ -1,6 +1,6 @@
 import EncodeParams from '../types/EncodeParams'
 import ExportRoi from '../export-roi/types/ExportRoi'
-import ControlRate from '../control-rate/ControlRate'
+import ControlRate from '../control-rate/types/ControlRate'
 import EncodeFrame from '../types/EncodeFrame'
 
 /** @internal */

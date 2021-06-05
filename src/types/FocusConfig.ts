@@ -1,5 +1,5 @@
 import HTMLCanvasElementWithCaptureStream from './HTMLCanvasElementWithCaptureStream'
-import ControlRate from '../control-rate/ControlRate'
+import ControlRate from '../control-rate/types/ControlRate'
 import ExportRoi from '../export-roi/types/ExportRoi'
 
 interface FocusConfig {

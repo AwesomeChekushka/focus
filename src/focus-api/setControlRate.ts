@@ -1,6 +1,6 @@
 import FocusConfig from '../types/FocusConfig'
 import config from './config'
-import ControlRate from '../control-rate/ControlRate'
+import ControlRate from '../control-rate/types/ControlRate'
 import ControlRateLabel from '../types/ControlRateLabel'
 import getControlRate from '../control-rate/getControlRate'
 
