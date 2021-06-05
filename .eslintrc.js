@@ -5,20 +5,20 @@ module.exports = {
     jest: true,
   },
   extends: [
-    'eslint:recommended',
+    'airbnb-typescript/base',
     'plugin:@typescript-eslint/recommended',
-    'standard',
+    'plugin:import/typescript',
     'plugin:prettier/recommended',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    project: './tsconfig.eslint.json',
     ecmaVersion: 12,
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
-    '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
+    '@typescript-eslint/no-var-requires': 0,
   },
-  ignorePatterns: ['dist/'],
 }
