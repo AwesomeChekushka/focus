@@ -9,7 +9,10 @@ interface ControlRateInput {
 }
 
 interface ControlRate {
-  (getBandwidth: GetBandwidth, input: ControlRateInput): ControlRateOutput
+  (
+    getBandwidth: GetBandwidth,
+    input: ControlRateInput,
+  ): Promise<ControlRateOutput>
 }
 
 export default ControlRate
